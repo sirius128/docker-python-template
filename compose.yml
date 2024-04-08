@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  python:
+    build: ./infra/docker/python
+    volumes:
+      - type: bind
+        source: ./src
+        target: /usr/src/
+    environment:
+      - TZ=Asia/Tokyo
